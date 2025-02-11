@@ -4,6 +4,19 @@ from typing import List
 from collections import deque
 
 def fill_tank(tank_size: int, bucket_sizes: List[int]) -> List[int]:
+    """Returns the bucket scoops needed to fill a tank of a given size.
+
+    You're trying to fill a tank exactly full of water by scooping water from an
+    infinite reservoir using a set of buckets. The goal is to find the bucket
+    scoops that exactly fill the tank while minimizing the number of scoops
+    needed.
+
+    Examples:
+    fill_tank(20, [6, 4, 3, 2]) => [6, 6, 4 ,4]
+    fill_tank(6, [5, 4, 2]) => [4, 2]
+    fill_tank(3, [2]) => None
+    """
+
     
     def fill_tank_recursive(amount: int, memo={}) -> tuple[int, List[int]]:
         if amount == 0:
